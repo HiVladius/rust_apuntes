@@ -8,17 +8,16 @@ fn main() {
     // let s3 = toma_y_devuelve(s2);
     // println!("{s1}, {s3}");
 
-   let mut s1 = String::from("hola");
+    let mut s1 = String::from("hola");
 
-   let r1 = &s1.len();
-   let r2 = &s1;
+    let r1: &usize = &s1.len();
+    let r2: &String = &s1;
     println!("{r1}, {r2}");
 
     let r3 = &mut s1;
     println!("{r3} mundo");
-  
 
-//     modificar(&mut s1);
+    //     modificar(&mut s1);
 }
 
 // fn variables(){
@@ -56,7 +55,6 @@ fn main() {
 //     un_string
 // }
 
-
 // fn calcular_longitud(s: &String) -> usize{
 //  s.len()
 // }
@@ -64,4 +62,3 @@ fn main() {
 // fn modificar(un_string: &mut String) {
 //     un_string.push_str(", mundo");
 // }
-
