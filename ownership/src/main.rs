@@ -1,24 +1,4 @@
-fn main() {
-    // variables();
 
-    // propiedades_funciones()
-
-    // let s1 = da_un_ownership();
-    // let s2 = String::from("hola");
-    // let s3 = toma_y_devuelve(s2);
-    // println!("{s1}, {s3}");
-
-    let mut s1 = String::from("hola");
-
-    let r1: &usize = &s1.len();
-    let r2: &String = &s1;
-    println!("{r1}, {r2}");
-
-    let r3 = &mut s1;
-    println!("{r3} mundo");
-
-    //     modificar(&mut s1);
-}
 
 // fn variables(){
 //     let mut s: String = String::from("hola");
@@ -55,9 +35,30 @@ fn main() {
 //     un_string
 // }
 
-// fn calcular_longitud(s: &String) -> usize{
-//  s.len()
+// fn main(){
+//     let s1 = String::from("Hola");
+//     let(s1, len)  = calcular_longitud(s1);
+
+//     print!("La longitud de {s1} es {len}");
 // }
+
+// fn calcular_longitud(s: String) -> (String, usize){
+//  let length: usize = s.len();
+
+//     (s, length)
+// }
+
+fn main() {
+    
+    let s1 = String::from("Hola");
+    let len = calcular_longitud_ref(&s1);
+    print!("La longitud de {s1 }es {len}");
+
+}
+
+fn calcular_longitud_ref(s: &String) -> usize {
+    s.len()
+}
 
 // fn modificar(un_string: &mut String) {
 //     un_string.push_str(", mundo");
