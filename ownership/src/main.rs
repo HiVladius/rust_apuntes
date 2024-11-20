@@ -35,31 +35,74 @@
 //     un_string
 // }
 
-// fn main(){
-//     let s1 = String::from("Hola");
-//     let(s1, len)  = calcular_longitud(s1);
+//  
 
-//     print!("La longitud de {s1} es {len}");
-// }
-
-// fn calcular_longitud(s: String) -> (String, usize){
-//  let length: usize = s.len();
-
-//     (s, length)
-// }
-
-fn main() {
+// fn main() {
     
-    let s1 = String::from("Hola");
-    let len = calcular_longitud_ref(&s1);
-    print!("La longitud de {s1 }es {len}");
+//     let s1 = String::from("Hola");
+//     let len = calcular_longitud_ref(&s1);
+//     print!("La longitud de {s1 }es {len}");
 
+// }
+
+// fn calcular_longitud_ref(s: &String) -> usize {
+//     s.len()
+// }
+
+// fn main() {
+//     let mut s = String::from("hello");
+
+//     let r1 = &s; // no hay problema
+//     let r2 = &s; // no hay problema
+//     println!("{r1} y {r2}");
+    // variables r1 y r2 no se usaran más a partir de aquí
+
+//     let r3 = &mut s; // no hay problema
+//     println!("{r3}");
+// }
+
+// fn main(){
+//     let referencia_a_la_nada = colgar();
+
+    
+// }
+
+// fn colgar() -> &String {
+//     let s = String::from("Hola");
+//     &s
+// }
+
+// fn main(){
+//     let s = no_colgaste();
+//     println!("{s}");
+// }
+
+// fn no_colgaste() -> String {
+//     let s = String::from("hola");
+//     s
+// }
+
+
+// El tipo de Slice
+
+
+
+fn main(){
+    let s = String::from("hola mundo");
+
+    let palabra = first_word(&s);
+
+    println!("{palabra}");
 }
 
-fn calcular_longitud_ref(s: &String) -> usize {
+fn first_word(s: &String) -> usize{
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate(){
+        if item == b' '{
+            return i;
+        }
+    }
+
     s.len()
 }
-
-// fn modificar(un_string: &mut String) {
-//     un_string.push_str(", mundo");
-// }
