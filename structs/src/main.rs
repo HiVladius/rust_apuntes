@@ -59,8 +59,9 @@ struct User {
 fn main() {
     let user1 = User{
         active: true,
-        username: "AlgunUsuario",
-        email: "correo@corre.com",
+        username: "AlgunUsuario".to_string(),
+        email: "correo@corre.com".to_string(),
         sign_in_count: 1,
     };
+    print!("{:?}", user1);
 }
