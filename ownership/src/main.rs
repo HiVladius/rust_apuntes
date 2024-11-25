@@ -1,26 +1,3 @@
-fn main() {
-    // variables();
-
-    // propiedades_funciones()
-
-    // let s1 = da_un_ownership();
-    // let s2 = String::from("hola");
-    // let s3 = toma_y_devuelve(s2);
-    // println!("{s1}, {s3}");
-
-   let mut s1 = String::from("hola");
-
-   let r1 = &s1.len();
-   let r2 = &s1;
-    println!("{r1}, {r2}");
-
-    let r3 = &mut s1;
-    println!("{r3} mundo");
-  
-
-//     modificar(&mut s1);
-}
-
 // fn variables(){
 //     let mut s: String = String::from("hola");
 //     s.push_str(", mundo");
@@ -56,12 +33,103 @@ fn main() {
 //     un_string
 // }
 
+//
 
-// fn calcular_longitud(s: &String) -> usize{
-//  s.len()
+// fn main() {
+
+//     let s1 = String::from("Hola");
+//     let len = calcular_longitud_ref(&s1);
+//     print!("La longitud de {s1 }es {len}");
+
 // }
 
-// fn modificar(un_string: &mut String) {
-//     un_string.push_str(", mundo");
+// fn calcular_longitud_ref(s: &String) -> usize {
+//     s.len()
 // }
 
+// fn main() {
+//     let mut s = String::from("hello");
+
+//     let r1 = &s; // no hay problema
+//     let r2 = &s; // no hay problema
+//     println!("{r1} y {r2}");
+// variables r1 y r2 no se usaran más a partir de aquí
+
+//     let r3 = &mut s; // no hay problema
+//     println!("{r3}");
+// }
+
+// fn main(){
+//     let referencia_a_la_nada = colgar();
+
+// }
+
+// fn colgar() -> &String {
+//     let s = String::from("Hola");
+//     &s
+// }
+
+// fn main(){
+//     let s = no_colgaste();
+//     println!("{s}");
+// }
+
+// fn no_colgaste() -> String {
+//     let s = String::from("hola");
+//     s
+// }
+
+// El tipo de Slice
+
+// fn main() {
+//     let s: String = String::from("hola mundo");
+
+//     let palabra: &str = first_word(&s);
+
+//     println!("{palabra}");
+// }
+
+// fn first_word(s: &String) -> &str {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return &s[0..i];
+//         }
+//     }
+
+//     &s[..]
+// }
+
+//! String literales como Slice
+fn main() {
+    let my_string = String::from("hello world");
+    let word = first_word(&my_string[0..6]);
+    print!("{word}");
+    let word = first_word(&my_string[..]);
+
+    print!("{word}");
+
+    let my_string_literal = "hello world";
+
+    //* first_word funciona con slices de string literales, sean parciales o completos */
+    let word = first_word(&my_string_literal[0..6]);
+    print!("{word}");
+    let word = first_word(&my_string_literal[..]);
+    print!("{word}");
+
+    let word = first_word(my_string_literal);
+    print!("{word}");
+}
+
+fn first_word(s: &str) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
+}
