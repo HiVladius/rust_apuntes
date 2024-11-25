@@ -1,0 +1,15 @@
+{
+    "name": "Rust",
+    "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+      "rust-lang.rust-analyzer",
+      "serayuzgur.crates",
+      "vadimcn.vscode-lldb"
+    ],
+    "postCreateCommand": "cargo build rustup component add clippy && rustup component add rustfmt && cargo build",
+    
+  }
+  

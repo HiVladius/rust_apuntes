@@ -63,5 +63,7 @@ fn main() {
         email: "correo@corre.com".to_string(),
         sign_in_count: 1,
     };
-    print!("{:?}", user1);
+    {
+    
+};
 }
