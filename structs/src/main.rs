@@ -105,7 +105,7 @@ struct Reactangulo {
 }
 
 impl Reactangulo {
-    fn area(&self) -> u32 {
+    fn _area(&self) -> u32 {
         self.width * self.height
     }
 
@@ -124,7 +124,7 @@ impl Reactangulo {
 }
 
 impl Reactangulo {
-    fn width(&self) -> bool {
+    fn _width(&self) -> bool {
         self.width > 0
     }
 }
