@@ -145,10 +145,10 @@ fn main() {
         height: 45,
     };
 
-    let square: Reactangulo = Reactangulo::square(20);
+    let _square: Reactangulo = Reactangulo::square(20);
 
     println!("El area del rectangulo es: \n{}", rect1.can_hold(&rect2));
     println!("El area del rectangulo es: \n{}", rect1.can_hold(&rect3));
 
-    println!("{:#?}", square);
+    
 }
