@@ -85,3 +85,36 @@
 //     println!("{:#?}, {:#?}, {:#?}, {:#?}", coin_tuple.0, coin_tuple.1, coin_tuple.2, coin_tuple.3);
 //     print!("{}", value);
 // }
+
+
+// Flujo de control conciso con if let
+
+
+#[derive(Debug)]
+enum UsState  {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    _Nickel,
+    _Dime,
+    Quarter(UsState),
+}
+
+fn main(){
+    let coin: Coin = Coin::Penny;
+    let mut count: i32 = 0;
+    // match coin {
+    //     Coin::Quarter(state) => println!("State quarter from {state:?}!"),
+    //     _ => count += 1,
+    // };
+
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {state:?}!");
+    } else {
+        count += 1;
+    }
+}
