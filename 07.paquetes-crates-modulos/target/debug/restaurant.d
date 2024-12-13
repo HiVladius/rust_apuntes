@@ -1,0 +1,1 @@
+C:\Users\vladm\OneDrive\Escritorio\Rust\07.paquetes-crates-modulos\target\debug\restaurant.exe: C:\Users\vladm\OneDrive\Escritorio\Rust\07.paquetes-crates-modulos\src\lib.rs C:\Users\vladm\OneDrive\Escritorio\Rust\07.paquetes-crates-modulos\src\main.rs
