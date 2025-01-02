@@ -27,7 +27,7 @@ pub use crate::components::almacen_de_valores_asociados_hashmaps::almacen_de_val
 
 
 
-// //* Excersise
+// //* Excercises
 pub use crate::components::excersise::excersise::calcular_mediana_moda;
 pub use crate::components::excersise::excersise::a_pig_latin;
 pub use crate::components::excersise::excersise::Empresa;
