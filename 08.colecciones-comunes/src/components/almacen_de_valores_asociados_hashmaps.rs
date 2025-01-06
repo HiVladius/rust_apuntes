@@ -47,10 +47,4 @@ pub mod almacen_de_valores_asociados_hashmaps {
 
         println!("{:?}", map);
     }
-
- 
-
-    
-    
-
 }

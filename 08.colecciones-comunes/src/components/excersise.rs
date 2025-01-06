@@ -24,7 +24,6 @@ pub mod excersise {
         (mediana, moda)
     }
 
-
     pub fn a_pig_latin(texto: &str) -> String {
         let vocales = [
             'a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'A', 'E', 'I', 'O', 'U', 'Á', 'É',
@@ -54,11 +53,9 @@ pub mod excersise {
         palabras.join(" ")
     }
 
-
     use std::collections::HashMap;
     pub struct Empresa {
         departamentos: HashMap<String, Vec<String>>,
-        
     }
 
     impl Empresa {
