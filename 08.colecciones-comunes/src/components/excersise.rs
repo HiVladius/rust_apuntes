@@ -56,6 +56,7 @@ pub mod excersise {
     use std::collections::HashMap;
     pub struct Empresa {
         departamentos: HashMap<String, Vec<String>>,
+        
     }
 
     impl Empresa {
