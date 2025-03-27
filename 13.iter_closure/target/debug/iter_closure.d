@@ -1,0 +1,1 @@
+C:\Users\vladm\OneDrive\Escritorio\rust\13.iter_closure\target\debug\iter_closure.exe: C:\Users\vladm\OneDrive\Escritorio\rust\13.iter_closure\src\closure.rs C:\Users\vladm\OneDrive\Escritorio\rust\13.iter_closure\src\iterators.rs C:\Users\vladm\OneDrive\Escritorio\rust\13.iter_closure\src\lib.rs C:\Users\vladm\OneDrive\Escritorio\rust\13.iter_closure\src\main.rs
